@@ -56,7 +56,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public/static/')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'sole/static/'),
+    os.path.join(PROJECT_ROOT, 'solesite/static/'),
 )
 
 # List of finder classes that know how to find static files in
@@ -102,11 +102,11 @@ AUTH_PROFILE_MODULE = 'profiles.Profile'
 USERENA_DISABLE_PROFILE_LIST = False
 USERENA_MUGSHOT_SIZE = 140
 
-ROOT_URLCONF = 'sole.urls'
-WSGI_APPLICATION = 'sole.wsgi.application'
+ROOT_URLCONF = 'solesite.urls'
+WSGI_APPLICATION = 'solesite.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT, 'sole/templates/'),
+    os.path.join(PROJECT_ROOT, 'solesite/templates/'),
 )
 
 INSTALLED_APPS = (
