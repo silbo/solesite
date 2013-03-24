@@ -1,4 +1,8 @@
-sole
-====
+# SOLE website
 
-Self Organizing Learning Environment website built with Django
+* enjoy
+
+## CREDITS ^_^
+
+* django
+* django-userena

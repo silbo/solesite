@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% block content %}
+<div id="intro">
+  <h2 class="intro"><span>SOLE</span><br/>Self organizing learning</h2>
+
+  <p class="intro">SOLE is a site that brings students together. 
+  It's a fully customizable application that takes
+  care of the signup, activation, messaging and more. It's GPL licensed, which
+  means you can use it for free!</p>
+
+  <p id="xtra-info">Got any feedback? For bugs you can report an issue at <a href="http://github.com/silps/django-userena/issues">Github</a>.</p>
+
+</div><!-- /intro-->
+
+<ul class="features">
+  <li><h3>What is SOLE?</h3>
+
+  <p> SOLE is an django application that supplies your project with full
+  account management. It handles the signup, activation, signin etc. for you.
+  It also supplies your users with an optional profile model that integrates
+  <a href="http://www.gravatar.com">gravatar</a> avatars. Signup at
+  this website and try it out for yourself.
+  </p>
+
+  </li>
+  <li><h3>It's free!</h3>
+
+  <p>SOLE is licensed under the GPL license. This means it's free
+  to use. You don't have to worry about any licensing..</p>
+
+  </li>
+  <li><h3>Messaging</h3>
+
+  <p>SOLE comes with an optional, chat-like, messaging system. This allows your
+  users to communicate with each other through your site. It's use is intuitive
+  and easy!</p>
+
+  </li>
+</ul>
+{% endblock %}
