@@ -19,6 +19,34 @@ DATABASES = {
     }
 }
 
+# Email settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = env['solesite.students']
+EMAIL_HOST_PASSWORD = env['solesitetest']
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "Solesite <solesite.students@gmail.com>"
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'public/media/')
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public/static/')
+STATIC_URL = '/static/'
+
+# when running on openshift
+if 'OPENSHIFT_REPO_DIR' in os.environ:
+    PROJECT_ROOT = os.path.join(os.environ.get('OPENSHIFT_REPO_DIR'), 'wsgi', 'solesite')
+    DATA_DIR = os.path.join(os.environ['OPENSHIFT_DATA_DIR'])
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(DATA_DIR, 'development.db'),
+        }
+    }
+
+    MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
+    STATIC_ROOT = os.path.join(os.environ.get('OPENSHIFT_REPO_DIR'), 'wsgi', 'static')
+
 # Internationalization
 TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en-us'
@@ -34,6 +62,11 @@ LANGUAGES = (
     ('el', ugettext('Greek')),
     ('en', ugettext('English')),
 )
+
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'solesite/static/'),
+)
+
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'locale'),
 )
@@ -50,14 +83,6 @@ USE_L10N = True
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'public/media/')
-MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public/static/')
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'solesite/static/'),
-)
 
 # List of finder classes that know how to find static files in
 # various locations.
