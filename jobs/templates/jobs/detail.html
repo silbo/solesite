@@ -1,0 +1,15 @@
+{% extends 'userena/base_userena.html' %}
+{% load i18n %}
+{% load url from future %}
+
+{% block content_title %}
+	<h2 class="content-title">{{ job.name }}</h2>
+{% endblock %}
+
+{% block content %}
+<ul>
+{% for jobparameter in job.jobparameter_set.all %}
+    <li>{{ jobparameter.name }} = {{ jobparameter.value }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

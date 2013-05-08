@@ -1,0 +1,21 @@
+{% extends 'userena/base_userena.html' %}
+{% load i18n %}
+{% load url from future %}
+
+{% block content_title %}
+	<h2 class="content-title">Jobs</h2>
+{% endblock %}
+
+{% block content %}
+
+{% if latest_jobs_list %}
+    <ul class="blocks">
+    {% for job in latest_jobs_list %}
+        <li><a href="{% url 'detail' job.id %}">{{ job.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No jobs are available.</p>
+{% endif %}
+
+{% endblock %}
