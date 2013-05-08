@@ -21,8 +21,8 @@ DATABASES = {
 
 # Email settings
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = env['solesite.students']
-EMAIL_HOST_PASSWORD = env['solesitetest']
+EMAIL_HOST_USER = 'solesite.students'
+EMAIL_HOST_PASSWORD = 'solesitetest'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = "Solesite <solesite.students@gmail.com>"
