@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     # (r'^accounts/signup/$',
     #  'userena.views.signup',
     #  {'signup_form': SignupFormExtra}),
-
+    url(r'^jobs/', include('jobs.urls')),
     (r'^accounts/', include('userena.urls')),
     (r'^messages/', include('userena.contrib.umessages.urls')),
     url(r'^$', 'profiles.views.promo', name='promo'),

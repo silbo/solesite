@@ -1,3 +1,4 @@
+
 # Django settings for SOLE project.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -61,6 +62,7 @@ LANGUAGES = (
     ('es', ugettext('Spanish')),
     ('el', ugettext('Greek')),
     ('en', ugettext('English')),
+    ('jp', ugettext('Japanese')),
 )
 
 STATICFILES_DIRS = (
@@ -149,6 +151,7 @@ INSTALLED_APPS = (
     'userena.contrib.umessages',
     'profiles',
     'easy_thumbnails',
+    'jobs',
 )
 
 LOGGING = {

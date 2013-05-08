@@ -10,6 +10,8 @@ class SignupFormExtra(SignupForm):
     
 
     """
+    interests = forms.CharField(widget=forms.Textarea, label=_(u'Interests'))
+    
     first_name = forms.CharField(label=_(u'First name'),
                                  max_length=30,
                                  required=False)
