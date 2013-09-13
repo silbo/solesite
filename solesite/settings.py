@@ -1,4 +1,3 @@
-
 # Django settings for SOLE project.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -21,12 +20,12 @@ DATABASES = {
 }
 
 # Email settings
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'solesite.students'
-EMAIL_HOST_PASSWORD = 'solesitetest'
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = "Solesite <solesite.students@gmail.com>"
+DEFAULT_FROM_EMAIL = ''
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'public/media/')
 MEDIA_URL = '/media/'
